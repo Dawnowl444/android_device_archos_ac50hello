@@ -1,0 +1,1 @@
+include device/archos/ac50hello/lineage_ac50hello.mk

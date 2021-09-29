@@ -1,0 +1,4 @@
+on post-fs-data
+# Support A/B feature for boot region
+    symlink /dev/block/mmcblk0boot0 /dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/preloader_a
+    symlink /dev/block/mmcblk0boot1 /dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/preloader_b
