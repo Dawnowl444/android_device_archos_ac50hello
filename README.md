@@ -19,7 +19,7 @@
 - [x] Screen goes off and on
 - [x] F2FS/EXT4 Support, exFAT/NTFS where supported
 - [x] all important partitions listed in mount/backup lists
-- ~~backup/restore to/from external (USB-OTG) storage~~
+ ~~backup/restore to/from external (USB-OTG) storage~~
 - [x] backup/restore to/from adb (https://gerrit.omnirom.org/#/c/15943/)
 - [ ] decrypt /data
 - [x] Correct date
@@ -32,10 +32,10 @@
 - [x] battery level
 - [x] temperature
 - [x] encrypted backups
-- ~~input devices via USB (USB-OTG) - keyboard, mouse and disks~~
+ ~~input devices via USB (USB-OTG) - keyboard, mouse and disks~~
 - [x] USB mass storage export
 - [x] set brightness
-- ~~vibrate~~
+ ~~vibrate~~
 - [x] screenshot
 - [x] partition SD card
 
@@ -90,7 +90,7 @@ Display | Landscape 1280x720 pixels, 5"
 Front Camera | 5.0 MP + Physical obturation system
 Rear Camera  | N/A
 Wifi | 2.4GHz
-WLAN | N/A
+Cellular | N/A
 Bluetooth | v4.0 BLE
 GPS | Yes
 Vibration Motor | N/A
