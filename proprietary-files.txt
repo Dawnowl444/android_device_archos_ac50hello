@@ -1,3 +1,4 @@
+
 # Audio
 vendor/lib/libaudiocompensationfilter_vendor.so
 vendor/lib/libaudiocomponentengine_vendor.so
@@ -22,6 +23,9 @@ vendor/lib/hw/audio.usb.default.so
 vendor/lib/hw/audio.usb.mt6580.so
 vendor/lib/hw/audio_policy.stub.so
 vendor/lib/vendor.mediatek.hardware.audio@2.1_vendor.so
+
+# Audio-configs
+vendor/etc/audio_param/AudioParamOptions.xml
 
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-mediatek
@@ -61,11 +65,23 @@ vendor/lib/libcam_hwutils.so
 vendor/lib/libcam_mmp.so
 vendor/lib/libcam_platform.so
 vendor/lib/libcam_utils.so
+vendor/lib/libmtkcam_debugutils.so
+vendor/lib/libmtkcam_device1.so
+vendor/lib/libmtkcam_fwkutils.so
+vendor/lib/libmtkcam_grallocutils.so
+vendor/lib/libmtkcam_imgbuf.so
+vendor/lib/libmtkcam_metadata.so
+vendor/lib/libmtkcam_stdutils.so
 vendor/lib/vendor.mediatek.hardware.camera.ccap@1.0_vendor.so
 vendor/lib/vendor.mediatek.hardware.camera.device@1.1_vendor.so
 
 # Camera-bin
 vendor/bin/hw/camerahalserver
+
+# Charger
+bin/kpoc_charger
+etc/init/kpoc_charger.rc
+lib/libshowlogo.so
 
 # Configstore
 vendor/bin/hw/android.hardware.configstore@1.0-service
@@ -161,13 +177,6 @@ vendor/lib/hw/vendor.mediatek.hardware.mtkcodecservice@1.1-impl.so
 vendor/lib/hw/vendor.mediatek.hardware.nvram@1.0-impl.so
 vendor/lib/hw/vendor.mediatek.hardware.power@1.1-impl.so
 vendor/lib/hw/vendor.mediatek.hardware.pq@2.0-impl.so
-vendor/lib/libmtkcam_debugutils.so
-vendor/lib/libmtkcam_device1.so
-vendor/lib/libmtkcam_fwkutils.so
-vendor/lib/libmtkcam_grallocutils.so
-vendor/lib/libmtkcam_imgbuf.so
-vendor/lib/libmtkcam_metadata.so
-vendor/lib/libmtkcam_stdutils.so
 vendor/lib/libmtkjpeg.so
 vendor/lib/libmtklimiter_vendor.so
 vendor/lib/libMtkOmxAdpcmDec.so
@@ -234,21 +243,34 @@ vendor/lib/hw/vibrator.default.so
 vendor/bin/hw/android.hardware.wifi@1.0-service
 vendor/etc/init/android.hardware.wifi@1.0-service.rc
 
-# Misc
-#-vendor/app/AutoDialer/AutoDialer.apk
-#-vendor/app/LocationEM2/LocationEM2.apk
-#-vendor/app/LPPeService/LPPeService.apk
-#-vendor/app/NlpService/NlpService.apk
-#-vendor/app/SimRecoveryTestTool/SimRecoveryTestTool.apk
-vendor/bin/aeev
-vendor/bin/aee_aedv
-vendor/bin/aee_archivev
+# rootdir
 vendor/bin/aee_core_forwarder
-vendor/bin/aee_dumpstatev
-vendor/bin/autobt
 vendor/bin/ccci_fsd
 vendor/bin/ccci_mdinit
 vendor/bin/ccci_rpcd
+vendor/bin/mnld
+vendor/bin/nvram_daemon
+vendor/bin/spm_loader
+vendor/bin/wmt_launcher
+vendor/bin/wmt_loader
+vendor/etc/init/aee_aedv.rc
+vendor/etc/init/microtrust.init_thh.rc
+vendor/etc/init/microtrust.storage.file.rc
+vendor/etc/init/microtrust.storage.proinfo.rc
+vendor/etc/init/microtrust.storage.rpmb.rc
+vendor/etc/partition_permission.sh
+
+# Misc
+-vendor/app/AutoDialer/AutoDialer.apk
+-vendor/app/LocationEM2/LocationEM2.apk
+-vendor/app/LPPeService/LPPeService.apk
+-vendor/app/NlpService/NlpService.apk
+-vendor/app/SimRecoveryTestTool/SimRecoveryTestTool.apk
+vendor/bin/aeev
+vendor/bin/aee_aedv
+vendor/bin/aee_archivev
+vendor/bin/aee_dumpstatev
+vendor/bin/autobt
 vendor/bin/fuelgauged
 vendor/bin/gsm0710muxd
 vendor/bin/hw/android.hardware.broadcastradio@1.1-service
@@ -259,7 +281,6 @@ vendor/bin/init_thh
 vendor/bin/istorageproxyd
 vendor/bin/md_ctrl
 vendor/bin/mfv_ut
-vendor/bin/mnld
 vendor/bin/mrdump_tool
 vendor/bin/mtkcam-debug
 vendor/bin/mtkrild
@@ -267,18 +288,13 @@ vendor/bin/mtk_agpsd
 vendor/bin/muxreport
 vendor/bin/netdagent
 vendor/bin/netdc
-vendor/bin/nvram_daemon
 vendor/bin/rttv
-vendor/bin/spm_loader
 vendor/bin/stp_dump3
 vendor/bin/sysenv_daemon
 vendor/bin/wifi2agps
 vendor/bin/wmt_concurrency
-vendor/bin/wmt_launcher
-vendor/bin/wmt_loader
 vendor/bin/wmt_loopback
 vendor/compatibility_matrix.xml
-#vendor/manifest.xml
 vendor/data/misc/ProjectConfig.mk
 vendor/etc/.tp/.ht120.mtc
 vendor/etc/aee-config
@@ -287,14 +303,12 @@ vendor/etc/cdma_ecc_list.xml
 vendor/etc/cdma_ecc_list_ss.xml
 vendor/etc/ecc_list.xml
 vendor/etc/emdlogger_usb_config.prop
-vendor/etc/fstab.mt6580
-#-vendor/etc/gallery/Gallery2Drm/Gallery2Drm.apk
-#-vendor/etc/gallery/Gallery2Gif/Gallery2Gif.apk
-#-vendor/etc/gallery/Gallery2Pq/Gallery2Pq.apk
-#-vendor/etc/gallery/Gallery2PqTool/Gallery2PqTool.apk
-#-vendor/etc/gallery/Gallery2Raw/Gallery2Raw.apk
-#-vendor/etc/gallery/Gallery2Root/Gallery2Root.apk
-vendor/etc/init/aee_aedv.rc
+-vendor/etc/gallery/Gallery2Drm/Gallery2Drm.apk
+-vendor/etc/gallery/Gallery2Gif/Gallery2Gif.apk
+-vendor/etc/gallery/Gallery2Pq/Gallery2Pq.apk
+-vendor/etc/gallery/Gallery2PqTool/Gallery2PqTool.apk
+-vendor/etc/gallery/Gallery2Raw/Gallery2Raw.apk
+-vendor/etc/gallery/Gallery2Root/Gallery2Root.apk
 vendor/etc/init/android.hardware.broadcastradio@1.1-service.rc
 vendor/etc/init/camerahalserver.rc
 vendor/etc/init/fuelgauged_init.rc
@@ -311,10 +325,6 @@ vendor/etc/init/init.wmt_drv.rc
 vendor/etc/init/init_connectivity.rc
 vendor/etc/init/md_ctrl.rc
 vendor/etc/init/merged_hal_service.rc
-vendor/etc/init/microtrust.init_thh.rc
-vendor/etc/init/microtrust.storage.file.rc
-vendor/etc/init/microtrust.storage.proinfo.rc
-vendor/etc/init/microtrust.storage.rpmb.rc
 vendor/etc/init/mtk_agpsd.rc
 vendor/etc/init/muxreport.rc
 vendor/etc/init/netdagent.rc
@@ -325,7 +335,6 @@ vendor/etc/init/spm_script.rc
 vendor/etc/init/sysenv_daemon.rc
 vendor/etc/init/wifi2agps.rc
 vendor/etc/mtk_omx_core.cfg
-vendor/etc/partition_permission.sh
 vendor/etc/permissions/pms_sysapp_removable_vendor_list.txt
 vendor/etc/powercontable.cfg
 vendor/etc/powerscntbl.cfg
@@ -447,8 +456,8 @@ vendor/lib/libvt_custom.so
 vendor/lib/libwifi-hal.so
 vendor/lib/mtk-ril.so
 vendor/lib/mtk-rilproxy.so
-#vendor/res/images/lcd_test_00.png
-#vendor/res/images/lcd_test_01.png
-#vendor/res/images/lcd_test_02.png
-#vendor/res/sound/ringtone.wav
-#vendor/res/sound/testpattern1.wav
+vendor/res/images/lcd_test_00.png
+vendor/res/images/lcd_test_01.png
+vendor/res/images/lcd_test_02.png
+vendor/res/sound/ringtone.wav
+vendor/res/sound/testpattern1.wav

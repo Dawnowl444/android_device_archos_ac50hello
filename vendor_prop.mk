@@ -1,4 +1,6 @@
+# Audio
 PRODUCT_PROPERTY_OVERRIDES += \
+    bt.profiles.avrcp.multiPlayer.enable=0 \
     persist.log.tag.RpAudioControl=I \
     pm.dexopt.downgrade_after_inactive_days=10 \
     ro.audio.silent=0 \
@@ -20,8 +22,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.mtk_audio_tuning_tool_ver=V1 \
     ro.mtk_bg_power_saving_support=1 \
     ro.mtk_bg_power_saving_ui=1 \
+# Bluetooth
+PRODUCT_PROPERTY_OVERRIDES += \
     ro.bt_show_dialog=0 \
     ro.mtk_bt_support=1 \
+# Camera
+PRODUCT_PROPERTY_OVERRIDES += \
     persist.log.tag.CdmaMtSms=I \
     persist.log.tag.ImsUtService=I \
     persist.log.tag.NetworkStats=I \
@@ -42,18 +48,28 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.hx_re_google_hotspot_ic=1 \
     ro.hx_system_front_camera=0 \
     ro.mtk_external_sim_only_slots=0 \
+# DRM
+PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true \
     ro.mtk_oma_drm_support=1 \
     ro.mtk_widevine_drm_l3_support=1 \
+# Dalvik
+PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapgrowthlimit=128m \
     dalvik.vm.heapsize=256m \
     dalvik.vm.jit.codecachesize=0 \
     dalvik.vm.mtk-stack-trace-file=/data/anr/mtk_traces.txt \
+# FM
+PRODUCT_PROPERTY_OVERRIDES += \
     fmradio.driver.enable=1 \
     ril.flightmode.poweroffMD=1 \
     ril.radiooff.poweroffMD=0 \
     ro.hx_music_fm=0 \
+# FRP
+PRODUCT_PROPERTY_OVERRIDES += \
     ro.frp.pst=/dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/frp \
+# Graphics
+PRODUCT_PROPERTY_OVERRIDES += \
     debug.hwui.render_dirty_regions=false \
     debug.sf.disable_backpressure=1 \
     ro.display_dream=1 \
@@ -61,6 +77,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.hx_display_landscape_mode=0 \
     ro.hx_display_mms_text_count=0 \
     ro.opengles.version=131072 \
+# Media
+PRODUCT_PROPERTY_OVERRIDES += \
     media.settings.xml=/vendor/etc/media_profiles.xml \
     mediatek.wlan.chip=CONSYS_MT6735 \
     mediatek.wlan.ctia=0 \
@@ -89,6 +107,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.yk737_cf9_971f_fwp_comm=0 \
     ro.yk737_cf9_971h_fwp_comm=0 \
     wfd.dummy.enable=1 \
+# Misc
+PRODUCT_PROPERTY_OVERRIDES += \
     Build.BRAND=MTK \
     RO_PRODUCT_FIRST_API_LEVEL \
     RO_VENDOR_VNDK_VERSION \
@@ -454,7 +474,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     sys.ipo.pwrdncap=2 \
     wifi.direct.interface=p2p0 \
     wifi.tethering.interface=ap0 \
+# NFC
+PRODUCT_PROPERTY_OVERRIDES += \
     persist.log.tag.TeleConfCtrler=I \
+# Radio
+PRODUCT_PROPERTY_OVERRIDES += \
     persist.log.tag.C2K_RIL-DATA=I \
     persist.log.tag.IMSRILRequest=I \
     persist.log.tag.IMS_RILA=I \
@@ -507,11 +531,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.radio.noril=true \
     ro.telephony.default_network=0 \
     ro.telephony.sim.count=2 \
+# USB
+PRODUCT_PROPERTY_OVERRIDES += \
     ro.hx_usb_big_notifi=0 \
     ro.sys.usb.bicr=no \
     ro.sys.usb.charging.only=yes \
     ro.sys.usb.mtp.whql.enable=0 \
     ro.sys.usb.storage.type=mtp \
+# WFD
+PRODUCT_PROPERTY_OVERRIDES += \
     wfd.iframesize.level=0 \
+# WLAN
+PRODUCT_PROPERTY_OVERRIDES += \
     ro.mtk_wlan_support=1 \
     wifi.interface=wlan0 \

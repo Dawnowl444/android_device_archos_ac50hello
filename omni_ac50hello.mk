@@ -1,28 +1,20 @@
 #
-# Copyright 2012 The Android Open Source Project
+# Copyright (C) 2024 The Android Open Source Project
+# Copyright (C) 2024 SebaUbuntu's TWRP device tree generator
+# Copyright (C) 2024 Dawnowl444
 #
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#      http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
+# SPDX-License-Identifier: Apache-2.0
 #
 
-# Build configuration for tablet
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
+
+# Inherit some common Omni stuff.
 $(call inherit-product, vendor/omni/config/common_tablet.mk)
 
-# Inherit device configuration
-$(call inherit-product, device/archos/ac50hello/device_ac50hello.mk)
+# Inherit from ac50hello device
+$(call inherit-product, device/archos/ac50hello/device.mk)
 
 # Device identifier
 PRODUCT_DEVICE := ac50hello
 PRODUCT_NAME := omni_ac50hello
-
-# find: 'vendor/omni/charger/images/hdpi': No such file or directory
-PRODUCT_AAPT_PREF_CONFIG := 560dpi

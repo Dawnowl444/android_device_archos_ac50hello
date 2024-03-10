@@ -1,28 +1,24 @@
-# /etc/fstab: static file system information V2
-#
-# <source>															<mount point>		<type>	<mount flags>									<fs_mgr_flags>
-#
-/dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/system		/system 			ext4	ro												wait,recoveryonly
-/dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/vendor		/vendor 			ext4	ro												wait,recoveryonly
-/dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/userdata		/data				f2fs	noatime,nosuid,nodev,discard,noflush_merge		wait,check,formattable,resize,encryptable=/dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/metadata
-/dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/cache			/cache 				ext4	noatime,nosuid,nodev,noauto_da_alloc,discard				wait,check
-/dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/protect1		/vendor/protect_f 	ext4	noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc	wait,check,formattable
-/dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/protect2		/vendor/protect_s 	ext4	noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc	wait,check,formattable
-/dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/nvdata		/vendor/nvdata 		ext4	noatime,nosuid,nodev,noauto_da_alloc,discard				wait,check,formattable
-/dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/frp			/persistent			emmc	defaults											defaults
-/dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/nvram			/nvram				emmc	defaults											defaults
-/dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/proinfo		/proinfo			emmc	defaults											defaults
-/dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/lk			/bootloader			emmc	defaults											defaults
-/dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/lk2			/bootloader2		emmc	defaults											defaults
-/dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/para			/misc				emmc	defaults											defaults
-/dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/boot			/boot				emmc	defaults											defaults
-/dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/recovery		/recovery			emmc	defaults											defaults
-/dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/logo			/logo				emmc	defaults											defaults
-/dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/expdb			/expdb				emmc	defaults											defaults
-/dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/secro			/secro				emmc	defaults											defaults
-/dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/seccfg		/seccfg				emmc	defaults											defaults
-/dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/tee1			/tee1				emmc	defaults											defaults
-/dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/tee2			/tee2				emmc	defaults											defaults
-/dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/odmdtbo		/odmdtbo			emmc	defaults											defaults
-/devices/platform/mt_usb*											auto				auto	defaults											voldmanaged=usbotg:auto
-/devices/mtk-msdc.0/11130000.msdc1*									auto				auto	defaults											voldmanaged=sdcard1:auto,encryptable=userdata
+/system               ext4     /dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/system  
+/system_image         emmc     /dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/system       flags=flashimg=1;backup=0
+/vendor               ext4     /dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/vendor       
+/data                 f2fs     /dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/userdata     encryptable=/dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/metadata
+/cache                ext4     /dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/cache        
+/vendor/protect_f     ext4     /dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/protect1     
+/vendor/protect_s     ext4     /dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/protect2     
+/vendor/nvdata        ext4     /dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/nvdata       
+/persistent           emmc     /dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/frp                                          
+/nvram                emmc     /dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/nvram        
+/proinfo              emmc     /dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/proinfo      
+/bootloader           emmc     /dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/lk           flags=backup=1
+/bootloader2          emmc     /dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/lk2     flags=backup=1;subpartitionof=/bootloader
+/misc                 emmc     /dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/para         
+/boot                 emmc     /dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/boot         
+/recovery             emmc     /dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/recovery     
+/logo                 emmc     /dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/logo         flags=flashimg=0;backup=1;
+/expdb                emmc     /dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/expdb        
+/secro                emmc     /dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/secro        
+/seccfg               emmc     /dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/seccfg       
+/tee1                 emmc     /dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/tee1         
+/tee2                 emmc     /dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/tee2         flags=subpartitionof=/tee1
+/odmdtbo              emmc     /dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/odmdtbo      
+/external_sd          auto     /dev/block/mmcblk1p1                                               flags=removable;storage

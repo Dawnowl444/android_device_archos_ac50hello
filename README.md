@@ -2,6 +2,10 @@
 
 ***
 
+## Device tree updated and cleaned with https://github.com/twrpdtgen/twrpdtgen
+
+***
+
 # Develloppement status :
 
 ### Blocking checks
@@ -47,18 +51,8 @@
 ```bash
 croot; export ALLOW_MISSING_DEPENDENCIES=true; export PATH=$PWD/bin:$PATH; source build/envsetup.sh; lunch omni_ac50hello-userdebug; mka clean; mka recoveryimage
 ```
-> <https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni/tree/twrp-8.1>
-#### If you get an error from __out/soong/.intermediates/external/selinux/checkpolicy/checkpolicy/linux_x86_64/gen/lex/external/selinux/checkpolicy/policy_scan.c__ do this then rebuild
-```bash
-croot; mv prebuilts/misc/linux-x86/flex/flex-2.5.39 prebuilts/misc/linux-x86/flex/flex-2.5.39.old; ln -s /usr/bin/flex prebuilts/misc/linux-x86/flex/flex-2.5.39
-```
-> <https://www.programmersought.com/article/8508930654/>
-#### If you get a __fatal error: 'ext4crypt_tar.h' file not found__ do this then rebuild
-```bash
-croot; cp bootable/recovery/crypto/ext4crypt/ext4crypt_tar.h bootable/recovery/
-```
 #### If you get a SyntaxError from Python this may mean that your /bin/python is Python3 but Android 8.1 needs Python2, so do this then rebuild
-> <https://wiki.archlinux.org/index.php/Android#Setting_up_the_build_environment>
+> <https://wiki.archlinux.org/index.php?title=Android&oldid=725613>
 
 ## ***Unsigned*** Stock rom extracted by none other than me :
 > <https://drive.google.com/file/d/1xBjN4QrCB_QOoR1nHTn25CGDdWrMkYng/view?usp=sharing>

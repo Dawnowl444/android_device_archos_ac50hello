@@ -1,13 +1,10 @@
-DEVICE=ac50hello
+#
+# Copyright (C) 2024 The Android Open Source Project
+# Copyright (C) 2024 SebaUbuntu's TWRP device tree generator
+#
+# SPDX-License-Identifier: Apache-2.0
+#
 
-if [[ -f android/omni-aosp.xml ]]; then
-	distribution='omni'
-elif [[ -d lineage-sdk ]]; then
-	distribution='lineage'
-else
-	distribution='full'
-fi
-
-for buildtype in eng user userdebug; do
-	add_lunch_combo ${distribution}_${DEVICE}-${buildtype}
-done 
+add_lunch_combo omni_ac50hello-user
+add_lunch_combo omni_ac50hello-userdebug
+add_lunch_combo omni_ac50hello-eng

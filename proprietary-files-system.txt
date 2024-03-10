@@ -1,0 +1,3 @@
+bin/kpoc_charger
+etc/init/kpoc_charger.rc
+lib/libshowlogo.so
