@@ -68,7 +68,7 @@ croot; export ALLOW_MISSING_DEPENDENCIES=true; export PATH=$PWD/bin:$PATH; sourc
 
 # About Device
 
-![Archos Hello 5](https://www.archos.com/img/products/tablets/archos_hello/archos_hello_5/archos_hello_5_intro_bg.jpg "Archos Hello 5 (ac50hello)")
+![Archos Hello 5](https://www.archos.com/wp-content/images/products/hello_5-300.png "Archos Hello 5 (ac50hello)")
 
 Component | Specs
 ---|:---:
